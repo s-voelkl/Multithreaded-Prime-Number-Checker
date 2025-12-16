@@ -1,0 +1,64 @@
+----- Concurrent Prime Number Checker -----
+1. Trial Checker.
+a) Batch runs with the TrialChecker:
+TrialChecker:   Threads: 1       max: 100.000    --> 9 ms
+TrialChecker:   Threads: 4       max: 100.000    --> 6 ms
+TrialChecker:   Threads: 12      max: 100.000    --> 4 ms
+TrialChecker:   Threads: 24      max: 100.000    --> 1 ms
+TrialChecker:   Threads: 1       max: 1.000.000  --> 106 ms
+TrialChecker:   Threads: 4       max: 1.000.000  --> 35 ms
+TrialChecker:   Threads: 12      max: 1.000.000  --> 13 ms
+TrialChecker:   Threads: 24      max: 1.000.000  --> 11 ms
+TrialChecker:   Threads: 1       max: 5.000.000  --> 972 ms
+TrialChecker:   Threads: 4       max: 5.000.000  --> 260 ms
+TrialChecker:   Threads: 12      max: 5.000.000  --> 89 ms
+TrialChecker:   Threads: 24      max: 5.000.000  --> 88 ms
+
+b) Single run of the TrialChecker with additional information.
+Upper bound for prime search: 1.000.000
+Total number of threads: 24 (0/24 failed)
+Dynamic block size chosen: 10.000
+
+Smallest 20 prime numbers: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+Largest 20 prime numbers: [999.671, 999.683, 999.721, 999.727, 999.749, 999.763, 999.769, 999.773, 999.809, 999.853, 999.863, 999.883, 999.907, 999.917, 999.931, 999.953, 999.959, 999.961, 999.979, 999.983]
+Total prime numbers found: 78.498
+Total computation time: 11 ms
+
+2. Sieve Of Eratosthenes.
+a) Batch runs with the Sieve Of Eratosthenes:
+Sieve Of Eratosthenes:  Threads: 1       max: 100.000    --> 4 ms
+Sieve Of Eratosthenes:  Threads: 4       max: 100.000    --> 5 ms
+Sieve Of Eratosthenes:  Threads: 12      max: 100.000    --> 7 ms
+Sieve Of Eratosthenes:  Threads: 24      max: 100.000    --> 6 ms
+Sieve Of Eratosthenes:  Threads: 1       max: 1.000.000  --> 6 ms
+Sieve Of Eratosthenes:  Threads: 4       max: 1.000.000  --> 3 ms
+Sieve Of Eratosthenes:  Threads: 12      max: 1.000.000  --> 2 ms
+Sieve Of Eratosthenes:  Threads: 24      max: 1.000.000  --> 2 ms
+Sieve Of Eratosthenes:  Threads: 1       max: 5.000.000  --> 25 ms
+Sieve Of Eratosthenes:  Threads: 4       max: 5.000.000  --> 9 ms
+Sieve Of Eratosthenes:  Threads: 12      max: 5.000.000  --> 6 ms
+Sieve Of Eratosthenes:  Threads: 24      max: 5.000.000  --> 7 ms
+
+b) Single run of the Sieve Of Eratosthenes with additional information.
+Upper bound for prime search: 1.500.000.000
+Total number of threads: 24 (0/24 failed)
+Dynamic block size chosen: 38.729
+
+Smallest 20 prime numbers: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+Largest 20 prime numbers: [1.499.999.569, 1.499.999.617, 1.499.999.621, 1.499.999.639, 1.499.999.687, 1.499.999.701, 1.499.999.771, 1.499.999.779, 1.499.999.791, 1.499.999.827, 1.499.999.843, 1.499.999.873, 1.499.999.881, 1.499.999.887, 1.499.999.909, 1.499.999.927, 1.499.999.929, 1.499.999.933, 1.499.999.951, 1.499.999.957]
+Total prime numbers found: 74.726.528
+Total computation time: 1.324 ms
+
+3. User Input for interactive prime number checking.
+Please enter the number of threads (suggested: 24): 24
+Please enter the upper bound for prime search (greater than 0): 1000000000
+Use the Sieve of Eratosthenes as the prime number checker? (y/n): y
+
+Upper bound for prime search: 1.000.000.000
+Total number of threads: 24 (0/24 failed)
+Dynamic block size chosen: 31.622
+
+Smallest 20 prime numbers: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+Largest 20 prime numbers: [999.999.491, 999.999.503, 999.999.527, 999.999.541, 999.999.587, 999.999.599, 999.999.607, 999.999.613, 999.999.667, 999.999.677, 999.999.733, 999.999.739, 999.999.751, 999.999.757, 999.999.761, 999.999.797, 999.999.883, 999.999.893, 999.999.929, 999.999.937]
+Total prime numbers found: 50.847.534
+Total computation time: 1.018 ms
