@@ -101,7 +101,9 @@ With an upper bound of 100.000.000:
 
 As it can be seen, the Sieve algorithm's efficiency increases dramatically with larger number ranges and greatly outperforms the TrialChecker.
 
-**Core Classes:**
+### Object Oriented Programming
+
+![UML class diagram](./documentation/UML.png "UML class diagram")
 
 - **`ConcurrentPrimeChecker`**: Main entry point that orchestrates benchmark runs for both algorithms with various thread counts and upper bounds.
 
